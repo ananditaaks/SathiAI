@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SathiAI</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="logo">SathiAI</div>
+        <p>Your simple AI companion</p>
+    </header>
+
+    <main>
+
+        <form method="POST" action="/chatbot">
+
+            <div class="input-area">
+
+                <input
+                        type="text"
+                        name="message"
+                        placeholder="Ask something..."
+                        required
+                >
+
+                <button type="submit">→</button>
+
+            </div>
+
+        </form>
+
+        <section class="answer-section">
+
+            <h2>Response</h2>
+
+            <div class="answer-box">
+                {{ANSWER}}
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>SathiAI · Powered by Gemini</p>
+    </footer>
+
+</div>
+
+</body>
+
+</html>
