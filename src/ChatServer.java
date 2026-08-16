@@ -21,7 +21,7 @@ public class ChatServer {
             );
 
             server.createContext(
-                    "/chatbot",
+                    "/",
                     new ChatHandler()
             );
 
