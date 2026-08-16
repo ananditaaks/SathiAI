@@ -1,7 +1,3 @@
-/* =========================================
-   SathiAI — Soft Editorial AI Design
-   ========================================= */
-
 * {
     box-sizing: border-box;
 }
@@ -12,84 +8,66 @@ body {
 
     font-family: Arial, sans-serif;
 
-    background:
-        radial-gradient(circle at 15% 20%, #e4bfd8 0%, transparent 28%),
-        radial-gradient(circle at 85% 75%, #c5c7df 0%, transparent 30%),
-        linear-gradient(135deg, #d4a8c9, #c7b4d1, #b9b8d3);
+    background: linear-gradient(
+            135deg,
+            #d7a8c8 0%,
+            #c9acd0 45%,
+            #b9b8d3 100%
+    );
 
-    color: #29262c;
+    color: #252329;
 
     overflow-x: hidden;
 }
 
-
-/* =========================================
-   Background SathiAI Typography
-   ========================================= */
-
 body::before {
-    content:
-        "SathiAI     SathiAI     SathiAI     SathiAI";
+    content: "SathiAI";
 
     position: fixed;
 
-    left: -8%;
-    bottom: -55px;
+    left: 50%;
+    bottom: -75px;
 
-    width: 120%;
+    transform: translateX(-50%);
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(100px, 15vw, 220px);
+    font-size: clamp(130px, 22vw, 320px);
 
-    font-weight: bold;
+    font-weight: 700;
 
-    letter-spacing: -6px;
-
-    color: rgba(255, 255, 255, 0.20);
+    color: rgba(255, 255, 255, 0.72);
 
     white-space: nowrap;
-
-    transform: rotate(-5deg);
 
     z-index: 0;
 
     pointer-events: none;
 }
 
-
-/* =========================================
-   Main Card
-   ========================================= */
-
 .container {
     position: relative;
 
     z-index: 1;
 
-    width: 92%;
-    max-width: 1050px;
+    width: 90%;
+    max-width: 900px;
 
-    margin: 45px auto;
+    min-height: 90vh;
+
+    margin: 5vh auto;
 
     padding: 65px 70px;
 
-    background: rgba(249, 247, 239, 0.96);
+    background: rgba(249, 247, 239, 0.94);
 
-    border: 1px solid rgba(255, 255, 255, 0.55);
-
-    border-radius: 38px;
+    border-radius: 42px;
 
     box-shadow:
-        0 25px 70px rgba(55, 40, 60, 0.18);
+            0 30px 80px rgba(50, 35, 55, 0.18);
 
     backdrop-filter: blur(10px);
 }
-
-
-/* =========================================
-   Header
-   ========================================= */
 
 header {
     text-align: center;
@@ -100,29 +78,22 @@ header {
 .logo {
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 56px;
+    font-size: 54px;
 
     font-weight: 600;
 
     letter-spacing: -2px;
 
-    color: #29262c;
+    color: #26232a;
 }
 
 header p {
-    margin-top: 10px;
-
-    font-size: 16px;
+    margin-top: 12px;
 
     color: #817984;
 
-    letter-spacing: 0.2px;
+    font-size: 16px;
 }
-
-
-/* =========================================
-   Input Area
-   ========================================= */
 
 .input-area {
     display: flex;
@@ -135,27 +106,22 @@ header p {
 
     background: #ffffff;
 
-    border: 1px solid #e7e1e5;
+    border: 1px solid #e8e3df;
 
     border-radius: 20px;
 
     box-shadow:
-        0 10px 28px rgba(60, 45, 65, 0.07);
+            0 12px 30px rgba(70, 55, 70, 0.07);
 
     transition: 0.25s;
 }
 
 .input-area:focus-within {
-    border-color: #c7b1c5;
-
     box-shadow:
-        0 12px 35px rgba(60, 45, 65, 0.12);
+            0 15px 35px rgba(70, 55, 70, 0.12);
+
+    border-color: #cbbbc9;
 }
-
-
-/* =========================================
-   Input
-   ========================================= */
 
 .input-area input {
     flex: 1;
@@ -172,17 +138,12 @@ header p {
 
     font-size: 16px;
 
-    color: #29262c;
+    color: #29262b;
 }
 
 .input-area input::placeholder {
     color: #aaa3aa;
 }
-
-
-/* =========================================
-   Send Button
-   ========================================= */
 
 .input-area button {
     width: 54px;
@@ -192,9 +153,9 @@ header p {
 
     border-radius: 16px;
 
-    background: #252229;
+    background: #242126;
 
-    color: #ffffff;
+    color: white;
 
     font-size: 21px;
 
@@ -209,15 +170,6 @@ header p {
     transform: translateY(-2px);
 }
 
-.input-area button:active {
-    transform: translateY(0);
-}
-
-
-/* =========================================
-   Response Section
-   ========================================= */
-
 .answer-section {
     margin-top: 55px;
 }
@@ -227,7 +179,7 @@ header p {
 
     display: block;
 
-    margin-bottom: 9px;
+    margin-bottom: 10px;
 
     font-size: 11px;
 
@@ -235,7 +187,7 @@ header p {
 
     letter-spacing: 2px;
 
-    color: #a66c82;
+    color: #a66c80;
 }
 
 .answer-section h2 {
@@ -243,19 +195,12 @@ header p {
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 36px;
+    font-size: 34px;
 
     font-weight: 500;
 
     letter-spacing: -0.8px;
-
-    color: #29262c;
 }
-
-
-/* =========================================
-   Response Box
-   ========================================= */
 
 .answer-box {
     min-height: 140px;
@@ -264,175 +209,25 @@ header p {
 
     background: #ffffff;
 
-    border: 1px solid #e7e1e5;
+    border: 1px solid #e9e4e0;
 
     border-radius: 24px;
 
     box-shadow:
-        0 12px 32px rgba(60, 45, 65, 0.06);
-
-    color: #39343b;
+            0 15px 35px rgba(70, 55, 70, 0.06);
 }
 
-
-/* =========================================
-   Paragraphs
-   ========================================= */
-
 .answer-box p {
-    margin: 0 0 18px;
+    margin: 0;
 
     font-size: 16px;
 
     line-height: 1.8;
 
     color: #39343b;
+
+    white-space: pre-wrap;
 }
-
-.answer-box p:last-child {
-    margin-bottom: 0;
-}
-
-
-/* =========================================
-   Headings
-   ========================================= */
-
-.answer-box h1,
-.answer-box h2,
-.answer-box h3,
-.answer-box h4,
-.answer-box h5,
-.answer-box h6 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    color: #29262c;
-
-    line-height: 1.35;
-
-    margin-top: 28px;
-
-    margin-bottom: 12px;
-}
-
-.answer-box h1 {
-    font-size: 30px;
-}
-
-.answer-box h2 {
-    font-size: 26px;
-}
-
-.answer-box h3 {
-    font-size: 22px;
-}
-
-.answer-box h4 {
-    font-size: 19px;
-}
-
-.answer-box h5 {
-    font-size: 17px;
-}
-
-.answer-box h6 {
-    font-size: 16px;
-}
-
-
-/* =========================================
-   Bold / Italic
-   ========================================= */
-
-.answer-box strong {
-    color: #29262c;
-
-    font-weight: 700;
-}
-
-.answer-box em {
-    color: #756d76;
-
-    font-style: italic;
-}
-
-
-/* =========================================
-   Lists
-   ========================================= */
-
-.answer-box ul,
-.answer-box ol {
-    margin: 15px 0 20px;
-
-    padding-left: 28px;
-}
-
-.answer-box li {
-    margin-bottom: 8px;
-
-    line-height: 1.7;
-}
-
-
-/* =========================================
-   Inline Code
-   ========================================= */
-
-.answer-box code {
-    padding: 3px 7px;
-
-    border-radius: 6px;
-
-    background: #f0e8f0;
-
-    color: #754d62;
-
-    font-family: Consolas, "Courier New", monospace;
-
-    font-size: 14px;
-}
-
-
-/* =========================================
-   Code Blocks
-   ========================================= */
-
-.answer-box pre {
-    margin: 20px 0;
-
-    padding: 20px;
-
-    overflow-x: auto;
-
-    border-radius: 14px;
-
-    background: #252229;
-
-    color: #f6f2f6;
-
-    box-shadow:
-        0 8px 20px rgba(40, 30, 45, 0.12);
-}
-
-.answer-box pre code {
-    padding: 0;
-
-    background: transparent;
-
-    color: inherit;
-
-    font-family: Consolas, "Courier New", monospace;
-
-    font-size: 14px;
-
-    line-height: 1.6;
-}
-
-
-/* =========================================
-   Footer
-   ========================================= */
 
 footer {
     text-align: center;
@@ -443,26 +238,21 @@ footer {
 footer p {
     margin: 0;
 
-    color: #99909a;
+    color: #9b929b;
 
     font-size: 13px;
 }
-
-
-/* =========================================
-   Mobile
-   ========================================= */
 
 @media (max-width: 700px) {
 
     .container {
         width: 94%;
 
-        margin: 20px auto;
+        margin: 3vh auto;
 
-        padding: 42px 22px;
+        padding: 45px 22px;
 
-        border-radius: 28px;
+        border-radius: 30px;
     }
 
     .logo {
@@ -479,7 +269,6 @@ footer p {
 
     .input-area button {
         width: 46px;
-
         height: 46px;
 
         border-radius: 13px;
@@ -490,108 +279,15 @@ footer p {
     }
 
     .answer-section h2 {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .answer-box {
         padding: 22px;
     }
 
-    .answer-box h1 {
-        font-size: 26px;
-    }
-
-    .answer-box h2 {
-        font-size: 23px;
-    }
-
-    .answer-box h3 {
-        font-size: 20px;
-    }
-
-    .answer-box pre {
-        padding: 15px;
-
-        font-size: 13px;
-    }
-
     body::before {
-        font-size: 90px;
-
-        bottom: -15px;
-
-        letter-spacing: -3px;
+        font-size: 100px;
+        bottom: -20px;
     }
-}
-/* AI response formatting */
-
-.answer-box h1,
-.answer-box h2,
-.answer-box h3,
-.answer-box h4 {
-    font-family: Georgia, "Times New Roman", serif;
-    color: #29252b;
-    margin-top: 24px;
-    margin-bottom: 12px;
-}
-
-.answer-box ul,
-.answer-box ol {
-    margin: 12px 0 18px 24px;
-    padding-left: 18px;
-}
-
-.answer-box li {
-    margin-bottom: 8px;
-    line-height: 1.7;
-}
-
-.answer-box strong {
-    color: #29252b;
-    font-weight: 700;
-}
-
-.answer-box em {
-    color: #6f5968;
-}
-
-/* Code blocks */
-.answer-box pre {
-    background: #27232a;
-    color: #f8f3f6;
-    padding: 22px;
-    border-radius: 18px;
-    overflow-x: auto;
-    margin: 20px 0;
-    box-shadow: 0 10px 25px rgba(50, 35, 55, 0.12);
-}
-
-.answer-box pre code {
-    background: transparent;
-    color: #f8f3f6;
-    font-family: Consolas, "Courier New", monospace;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-/* Inline code */
-.answer-box code {
-    background: #eee5ec;
-    color: #69485b;
-    padding: 3px 7px;
-    border-radius: 6px;
-    font-family: Consolas, "Courier New", monospace;
-    font-size: 14px;
-}
-
-/* Paragraph spacing */
-.answer-box p {
-    margin-bottom: 16px;
-}
-
-/* Horizontal separator */
-.answer-box hr {
-    border: none;
-    border-top: 1px solid #e5dce2;
-    margin: 24px 0;
 }
